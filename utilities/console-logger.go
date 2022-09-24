@@ -16,3 +16,12 @@ func (*ConsoleLogger) Info(msg string) {
 func (*ConsoleLogger) Debug(msg string) {
 	fmt.Println("Debug:: " + msg)
 }
+
+var consoleLogger *ConsoleLogger
+
+func GetConsoleLoggerInstance() *ConsoleLogger {
+	if consoleLogger == nil {
+		consoleLogger = &ConsoleLogger{}
+	}
+	return consoleLogger
+}

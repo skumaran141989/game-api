@@ -1,8 +1,8 @@
 package repos
 
 import (
-	"github.com/game-api/DataAccessLayer/models"
 	"github.com/jinzhu/gorm"
+	"github.com/skumaran141989/game-api/DataAccessLayer/models"
 )
 
 type Tribes struct {
@@ -10,10 +10,7 @@ type Tribes struct {
 }
 
 type TribeDB interface {
-	Get(id string) (*models.Tribe, error)
-	GetAll(id string) ([]models.Tribe, error)
-	Update(tribe models.Tribe)
-	Delete(id string)
+	DB[models.Tribe]
 }
 
 func NewTribe(db *gorm.DB) *Tribes {

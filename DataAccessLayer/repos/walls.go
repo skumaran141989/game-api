@@ -1,8 +1,8 @@
 package repos
 
 import (
-	"github.com/game-api/DataAccessLayer/models"
 	"github.com/jinzhu/gorm"
+	"github.com/skumaran141989/game-api/DataAccessLayer/models"
 )
 
 type Walls struct {
@@ -10,10 +10,7 @@ type Walls struct {
 }
 
 type WallDB interface {
-	Get(id string) (*models.Wall, error)
-	GetAll(id string) ([]models.Wall, error)
-	Update(wall *models.Wall)
-	Delete(id string)
+	DB[models.Wall]
 }
 
 func NewWall(db *gorm.DB) *Walls {

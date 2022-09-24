@@ -1,8 +1,8 @@
 package repos
 
 import (
-	models "github.com/game-api/DataAccessLayer/models"
 	"github.com/jinzhu/gorm"
+	models "github.com/skumaran141989/game-api/DataAccessLayer/models"
 )
 
 type WallAttackEvents struct {
@@ -10,10 +10,7 @@ type WallAttackEvents struct {
 }
 
 type WallAttackEventDB interface {
-	Get(id string) (*models.WallAttackEvent, error)
-	GetAll(query string) ([]models.WallAttackEvent, error)
-	Update(t models.WallAttackEvent)
-	Delete(id string)
+	DB[models.WallAttackEvent]
 }
 
 func NewWallAttackEvent(db *gorm.DB) *WallAttackEvents {

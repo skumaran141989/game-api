@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../application-app"
+		},
+		{
+			"path": "../../application-config-app"
+		},
+		{
+			"path": "../../recommendation"
+		},
+		{
+			"path": "../../user-service"
+		},
+		{
+			"path": "../../game-api"
+		},
+		{
+			"path": ".."
+		}
+	]
+}
